@@ -20,14 +20,14 @@ public class Holidays extends Base_page {
     public By serholiday = By.xpath("(//input[@id='BE_holiday_search_btn'])[1]");
     public By depatList = By.xpath("(//div[@class='viewport'])");
     public By destList = By.xpath("(//div[@class='viewport'])");
-   // public By month = By.xpath("");
+
     public void holidaytabs(){
         click(holidayta);
-      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
     public void holiday_depature() {
-        String text1 = "New Delhi";
+        String text1 = "Mumbai";
         click(holidepart);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
         send_keys(holidepart,text1);
@@ -41,7 +41,7 @@ public class Holidays extends Base_page {
     public void holiday_destination(){
         String text2 = "Dubai";
         click(holidest);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
         send_keys(holidest,text2);
         for (WebElement element : getEl(destList)) {
             if (element.getText().contains(text2)) {
@@ -50,10 +50,13 @@ public class Holidays extends Base_page {
             }
         }
     }
-    public void search_holiday(){
+    public void search_holiday() throws InterruptedException {
         click(serholiday);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
+
     }
+
+
 
 }
 

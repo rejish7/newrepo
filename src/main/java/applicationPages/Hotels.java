@@ -27,7 +27,7 @@ public class Hotels extends Base_page {
 
     public void hoteltab() {
         click(hoteltab);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
     }
 
@@ -61,6 +61,6 @@ public class Hotels extends Base_page {
     }
     public void search_hotel(){
         click(srchotel);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 }

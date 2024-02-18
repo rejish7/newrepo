@@ -44,9 +44,13 @@ public class Base_page {
         wait = new WebDriverWait(driver, Duration.ofMinutes(timeout));
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by_locator));
     }
-    public void WaitForVisibilityOfElement(By by_locators,int timeout){
+    public void WaitForVisibilityOfElement(By by_locators, int timeout){
         wait = new WebDriverWait(driver,Duration.ofSeconds(timeout));
         wait.until(ExpectedConditions.visibilityOf((WebElement) by_locators));
+    }
+    public  void closepage(){
+        String currentwindow = driver.getWindowHandle();
+        driver.close();
     }
 }
 

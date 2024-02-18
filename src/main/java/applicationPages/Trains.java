@@ -36,12 +36,12 @@ public class Trains extends Base_page {
 //        select.selectByVisibleText("Trains");
         WebElement more = driver.findElement(By.xpath("//*[@id=\"bEnginePos\"]/ul/li[7]/span"));
         WebElement train= driver.findElement(By.xpath("//a[@id='booking_engine_trains']"));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         Actions actions = new Actions(driver);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         actions.click(more).build().perform();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         train.click();
     }
 
@@ -61,11 +61,11 @@ public class Trains extends Base_page {
         }
     }
 
-    public void traingoingtoplace() {
+    public void traingoingtoplace() throws InterruptedException {
         click(trainplace2);
-        String text2 = "Mumbai";
+        String text2 = "Patna Jn";
         click(trainplace2);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         send_keys(trainplace2, text2);
         for (WebElement element : getEl(trainGoinglist)) {
             if (element.getText().contains(text2)) {
@@ -87,7 +87,11 @@ public class Trains extends Base_page {
     }
 
     public void Searchtrains() {
+
         click(srctrain);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
+
     }
+
 }
 

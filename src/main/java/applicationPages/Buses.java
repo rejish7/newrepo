@@ -28,7 +28,7 @@ public class Buses extends Base_page {
 
     public void busestab() {
         click(Buses_tab);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
 

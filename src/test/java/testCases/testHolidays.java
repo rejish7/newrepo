@@ -11,14 +11,15 @@ import testBase.Browser;
 import java.io.IOException;
 
 public class testHolidays extends Browser {
+
     //String path = System.getProperty("user.dir") + File.separator + "TestData" + File.separator + "dataSet.json";
     Holidays holiday;
 
     @Parameters({"browser","url"})
     @BeforeClass
     public void testSearchbuses(String browser,String url) throws IOException, ParseException {
-//        String browser = new ReadJson().Read_the_value_from_json(path, "browser");
-//        String url = new ReadJson().Read_the_value_from_json(path, "url");
+//        browser = new ReadJson().Read_the_value_from_json(path, "browser");
+//        url = new ReadJson().Read_the_value_from_json(path, "url");
 //        String author = new ReadJson().Read_the_value_from_json(path, "author");
         openBrowser(browser, url);
 

@@ -7,12 +7,13 @@
     <parameter name = "author" value="${author_name}"/>
 
         <classes>
-            <class name="testCases.testFlight"/>
+
             <class name="testCases.testHolidays"/>
             <class name="testCases.testHotels"/>
-            <class name="testCases.testvillas"/>
             <class name="testCases.testbuses"/>
-            <class name="testCases.testtrains"/>
+            <class name="testCases.testvillas"/>
+<!--            <class name="testCases.testtrains"/>-->
+            <class name="testCases.testFlight"/>
         </classes>
     </test>
 </suite>

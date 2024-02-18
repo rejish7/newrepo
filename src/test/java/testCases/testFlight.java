@@ -30,7 +30,7 @@ public class testFlight extends Browser {
         String tt = new ReadJson().Read_the_value_from_json(path,"airpott");
         System.out.println(tt);
         flights = new Flights(driver);
-
+        flights.flighttab();
         flights.Book_one_way_ticket();
         flights.book_a_ticket(new ReadJson().Read_the_value_from_json(path,"text"));
         flights.Eneter_Departure_date();
