@@ -4,6 +4,7 @@ import basePages.Base_page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 
@@ -13,25 +14,33 @@ public class Villas extends Base_page {
         super(driver);
         this.driver = driver;
     }
-    public By villastab = By.xpath("(//a[@id='booking_engine_homestays'])");
 
     public By place1 = By.xpath("(//input[@name='BE_hotel_destination'])[1]");
     public By placelist = By.xpath("(//div[@class='viewport'])[1]");
     public By checkin1 = By.xpath("(//input[@id='BE_hotel_checkin_date'])[1]");
-    public By entrydate1 = By.xpath("(//td[@id='23/01/2024'])[1]");
+    public By entrydate1 = By.xpath("(//td[@id='23/03/2024'])[1]");
     public By checkout1 = By.xpath("(//input[@id='BE_hotel_checkout_date'])[1]");
-    public By exitdate1 = By.xpath("(//td[@id='01/02/2024'])[1]");
+    public By exitdate1 = By.xpath("(//td[@id='01/04/2024'])[1]");
     public By  srcvilla = By.xpath("(//input[@id='BE_hotel_htsearch_btn'])[1]");
 
+
+
     public void Villatab() {
-        click(villastab);
+        WebElement more = driver.findElement(By.xpath("//*[@id=\"bEnginePos\"]/ul/li[7]/span"));
+        WebElement villa = driver.findElement(By.xpath("//a[@id='booking_engine_homestays']"));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+
+        Actions actions = new Actions(driver);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        actions.click(more).build().perform();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        villa.click();
     }
 
     public void Hotelplace() {
-        click(place1); String text1 = "New Delhi";
         click(place1);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        String text1 = " Mumbai";
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         send_keys(place1,text1);
         for (WebElement element : getEl(placelist)) {
             if (element.getText().contains(text1)) {

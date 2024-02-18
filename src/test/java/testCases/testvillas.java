@@ -5,7 +5,6 @@ import org.json.simple.parser.ParseException;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import utility.ReadJson;
 import testBase.Browser;
 
 import java.io.File;
@@ -18,10 +17,10 @@ public class testvillas extends Browser {
 
     @Parameters({"browser","url","author"})
     @BeforeClass
-    public void testSearchbuses() throws IOException, ParseException {
-        String browser = new ReadJson().Read_the_value_from_json(path, "browser");
-        String url = new ReadJson().Read_the_value_from_json(path, "url");
-        String author= new ReadJson().Read_the_value_from_json(path, "author");
+    public void testSearchvillas(String browser,String url) throws IOException, ParseException {
+//        String browser = new ReadJson().Read_the_value_from_json(path, "browser");
+//        String url = new ReadJson().Read_the_value_from_json(path, "url");
+//        String author= new ReadJson().Read_the_value_from_json(path, "author");
         openBrowser(browser, url);
 
 
@@ -37,6 +36,6 @@ public class testvillas extends Browser {
         villas.checkoutdate();
         villas.search_villas();
 
-        driver.close();
+        closepage();
     }
 }

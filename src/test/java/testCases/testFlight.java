@@ -2,7 +2,6 @@ package testCases;
 
 import applicationPages.Flights;
 import org.json.simple.parser.ParseException;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import testBase.Browser;
@@ -16,11 +15,10 @@ public class testFlight extends Browser {
     Flights flights;
 
     @Parameters({"browser","url","author"})
-    @BeforeClass
-    public void testSearchbuses() throws IOException, ParseException {
-        String browser = new ReadJson().Read_the_value_from_json(path, "browser");
-        String url = new ReadJson().Read_the_value_from_json(path, "url");
-        String author= new ReadJson().Read_the_value_from_json(path, "author");
+    public void testSearchbuses(String browser,String url) throws IOException, ParseException {
+//        String browser = new ReadJson().Read_the_value_from_json(path, "browser");
+//        String url = new ReadJson().Read_the_value_from_json(path, "url");
+//        String author= new ReadJson().Read_the_value_from_json(path, "author");
         String airpott = new ReadJson().Read_the_value_from_json(path,"airpott");
         openBrowser(browser, url);
 
@@ -38,7 +36,7 @@ public class testFlight extends Browser {
         flights.Eneter_Departure_date();
         flights.SearchFlight();
 
-        driver.close();
+        closepage();
     }
 
 

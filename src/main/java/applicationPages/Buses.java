@@ -23,7 +23,7 @@ public class Buses extends Base_page {
     public By Goinglist = By.xpath("(//div[@class='ac_results dest_ac'])");
 
     public By datetab = By.xpath("(//input[@id='BE_bus_depart_date'])");
-    public By date2 = By.xpath("//td[@id='01/02/2024']");
+    public By date2 = By.xpath("//td[@id='01/03/2024']");
     public By srcbuses = By.xpath("(//input[@id='BE_bus_search_btn'])");
 
     public void busestab() {

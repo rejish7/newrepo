@@ -23,7 +23,7 @@ public class Trains extends Base_page {
     public By trainGoinglist = By.xpath("//div[@class='ac_results dest_ac']");
 
     public By traindatetab = By.xpath("//input[@id='BE_train_depart_date']");
-    public By trdate2 = By.xpath("//td[@id='02/02/2024']");
+    public By trdate2 = By.xpath("//td[@id='02/03/2024']");
     public By srctrain = By.xpath("//input[@id='BE_train_search_btn']");
 
 
@@ -34,7 +34,7 @@ public class Trains extends Base_page {
 //        WebElement element = driver.findElement(By.xpath("//div[@class='moreOption']//ul"));
 //        Select select = new Select(element);
 //        select.selectByVisibleText("Trains");
-        WebElement more = driver.findElement(By.xpath("//div[@class='moreOption']//ul"));
+        WebElement more = driver.findElement(By.xpath("//*[@id=\"bEnginePos\"]/ul/li[7]/span"));
         WebElement train= driver.findElement(By.xpath("//a[@id='booking_engine_trains']"));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 

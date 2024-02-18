@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-
-    <test name="chrome">
+<suite name="Suite">
+    <test name="Test">
     <parameter name = "browser" value="${browser_name}"/>
     <parameter name = "url" value="${url_name}"/>
     <parameter name = "author" value="${author_name}"/>
@@ -13,8 +12,7 @@
             <class name="testCases.testHotels"></class>
             <class name="testCases.testvillas"></class>
             <class name="testCases.testbuses"></class>
-
-<!--            <class name="testCases.testtrains"></class>-->
+            <class name="testCases.testtrains"></class>
 <!--            <class name="testCases.testfreight"></class> -->
 
         </classes>

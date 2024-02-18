@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 
 import java.time.Duration;
 
-import static org.testng.Reporter.clear;
 
 public class Hotels extends Base_page {
 
@@ -20,21 +19,22 @@ public class Hotels extends Base_page {
     public By place = By.xpath("(//input[@id='BE_hotel_destination_city'])[1]");
     public By hotellist = By.xpath("(//div[@class='viewport'])[1]");
     public By checkin = By.xpath("(//input[@id='BE_hotel_checkin_date'])[1]");
-    public By entrydate = By.xpath("//td[@id='01/02/2024']");
+    public By entrydate = By.xpath("//td[@id='01/03/2024']");
     public By checkout = By.xpath("(//input[@id='BE_hotel_checkout_date'])[1]");
-    public By exitdate = By.xpath("//td[@id='05/02/2024']");
+    public By exitdate = By.xpath("//td[@id='05/03/2024']");
     public By  srchotel= By.xpath("(//input[@id='BE_hotel_htsearch_btn'])[1]");
 
 
     public void hoteltab() {
         click(hoteltab);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+
     }
 
     public void destinationplace() {
 
         click(place);
-        clear();
+        clear(place);
         String text1 = "New Delhi";
         click(place);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));

@@ -3,6 +3,7 @@ package testBase;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -28,11 +29,17 @@ public class Browser {
             case "safari":
                 WebDriverManager.safaridriver().setup();
                 driver = new SafariDriver();
+            case "edge":
+                WebDriverManager.edgedriver().setup();
+                driver = new EdgeDriver();
         }
 
         driver.manage().window().maximize();
         driver.get(url);
 
     }
-
+    public  void closepage(){
+        String currentwindow = driver.getWindowHandle();
+        driver.close();
+    }
 }

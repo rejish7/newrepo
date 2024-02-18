@@ -26,7 +26,7 @@ public class Flights extends Base_page {
 
     public By departureDate = By.id("BE_flight_origin_date");
 
-    public By date = By.xpath("//td[@id='02/02/2024']");
+    public By date = By.xpath("//td[@id='02/03/2024']");
 
     public By searchAgain = By.xpath("//span[contains(text(),'Search Again')]");
 

@@ -24,6 +24,7 @@ public class Base_page {
     public void click(By by_locator){
         driver.findElement(by_locator).click();
     }
+    public void clear(By by_locators){driver.findElement(by_locators).clear();}
 
     public List<WebElement> getEl(By by_locator){
         return driver.findElements(by_locator);
@@ -47,11 +48,8 @@ public class Base_page {
         wait = new WebDriverWait(driver,Duration.ofSeconds(timeout));
         wait.until(ExpectedConditions.visibilityOf((WebElement) by_locators));
     }
-    public  void closepage(){
-        String currentwindow = driver.getWindowHandle();
-        driver.close();
-    }
-
-
-
 }
+
+
+
+
