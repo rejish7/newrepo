@@ -15,7 +15,7 @@ public class testHotels extends Browser {
     String path = System.getProperty("user.dir") + File.separator + "TestData" + File.separator + "dataSet.json";
     Hotels hotel ;
 
-    @Parameters({"browser","url","author"})
+    @Parameters({"browser","url"})
     @BeforeClass
     public void testSearchhotels(String browser, String url) throws IOException, ParseException {
 //        String browser = new ReadJson().Read_the_value_from_json(path, "browser");

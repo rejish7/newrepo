@@ -11,7 +11,7 @@ import java.io.IOException;
 public  class testbuses extends Browser{
    // String path = System.getProperty("user.dir") + File.separator + "TestData" + File.separator + "dataSet.json";
     Buses buses;
-    @Parameters({"browser","url","author"})
+    @Parameters({"browser","url"})
     @BeforeClass
     public void testSearchbuses(String browser,String url)  {
 //       String browser = new ReadJson().Read_the_value_from_json(path, "browser");

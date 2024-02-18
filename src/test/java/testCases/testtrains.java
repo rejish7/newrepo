@@ -14,7 +14,7 @@ public class testtrains extends Browser {
     String path = System.getProperty("user.dir") + File.separator + "TestData" + File.separator + "dataSet.json";
     Trains trains;
 
-    @Parameters({"browser","url","author"})
+    @Parameters({"browser","url"})
     @BeforeClass
     public void testSearchtrains(String browser,String url) throws IOException, ParseException {
 //        String browser = new ReadJson().Read_the_value_from_json(path, "browser");
