@@ -42,9 +42,9 @@ public class Villas extends Base_page {
             click(place1);
             clear(place1);
             String text1 = "Pune";
-            send_keys(place1, text1);
-            click(place1);
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+            send_keys(place1, text1);
+
             for (WebElement element : getEl(placelist)) {
                 if (element.getText().contains(text1)) {
                     element.click();

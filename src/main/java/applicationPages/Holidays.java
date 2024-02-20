@@ -41,7 +41,9 @@ public class Holidays extends Base_page {
     public void holiday_destination(){
         String text2 = "Dubai";
         click(holidest);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        clear(holidest);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
         send_keys(holidest,text2);
         for (WebElement element : getEl(destList)) {
             if (element.getText().contains(text2)) {

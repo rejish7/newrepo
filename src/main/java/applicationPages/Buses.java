@@ -35,7 +35,7 @@ public class Buses extends Base_page {
     public void destiplace() {
         click(place);
         String text1 = "New Delhi";
-        click(place);
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         send_keys(place, text1);
         for (WebElement element : getEl(departlist)) {
@@ -50,7 +50,6 @@ public class Buses extends Base_page {
     public void goingtoplace() {
         click(place2);
         String text2 = "Mumbai";
-        click(place2);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         send_keys(place2, text2);
         for (WebElement element : getEl(Goinglist)) {

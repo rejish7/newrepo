@@ -33,6 +33,7 @@ public class testHolidays extends Browser {
         holiday.holiday_destination();
         holiday.search_holiday();
 
+
         closepage();
     }
 }
