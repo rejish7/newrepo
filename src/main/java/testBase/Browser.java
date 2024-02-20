@@ -26,12 +26,16 @@ public class Browser {
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
                 break;
+
             case "safari":
                 WebDriverManager.safaridriver().setup();
                 driver = new SafariDriver();
+                break;
+
             case "edge":
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
+                break;
         }
 
         driver.manage().window().maximize();

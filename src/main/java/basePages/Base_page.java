@@ -14,6 +14,7 @@ public class Base_page {
     WebDriverWait wait;
 
     public Base_page(WebDriver driver){
+
         this.driver = driver;
     }
 

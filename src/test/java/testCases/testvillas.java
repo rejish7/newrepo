@@ -7,12 +7,11 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import testBase.Browser;
 
-import java.io.File;
 import java.io.IOException;
 
 public class testvillas extends Browser {
 
-    String path = System.getProperty("user.dir") + File.separator + "TestData" + File.separator + "dataSet.json";
+   // String path = System.getProperty("user.dir") + File.separator + "TestData" + File.separator + "dataSet.json";
     Villas villas;
 
     @Parameters({"browser","url"})
